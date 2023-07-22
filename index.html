@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <div>
+      <div>
+        <label>Enter phone number : </label>
+        <input type="tel" id="phone" />
+      </div>
+      <div id="recaptcha"></div>
+      <div><button id="send">Send OTP</button></div>
+    </div>
+    <hr />
+    <div>
+      <div>
+        <label>Enter OTP received : </label>
+        <input type="text" id="otp" />
+      </div>
+      <div><button id="verify">Verify OTP</button></div>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <!-- Original Plug 'N' Play method -->
+    <script type="module">
+      import {
+        initPhoneAuth,
+        resetCaptcha,
+        sendOtp,
+        verifyOtp,
+      } from "./firebasePhoneAuth.js";
+
+      const sendBtn = document.getElementById("send");
+      const verifyBtn = document.getElementById("verify");
+      const otp = document.getElementById("otp");
+      const phone = document.getElementById("phone");
+      const recaptchaContainer = "recaptcha";
+
+      const firebaseConfig = "YOUR_FIREBASE_CONFIG_JSON";
+
+      // initialize authentication
+      initPhoneAuth(firebaseConfig, recaptchaContainer);
+
+      // send otp on clicking send
+      sendBtn.addEventListener("click", () => {
+        const val = phone.value;
+        alert("Your phone : " + val);
+
+        // send OTP
+        sendOtp(val);
+      });
+
+      // verify otp as and when required
+      verifyBtn.addEventListener("click", () => {
+        const val = otp.value;
+        alert("OTP entered is : " + val);
+
+        // verify OTP
+        verifyOtp(val);
+      });
+    </script>
+  </body>
+</html>
