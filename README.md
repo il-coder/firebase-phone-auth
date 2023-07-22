@@ -8,4 +8,4 @@ It is a wrapper over the firebase functions and code to perform the phone OTP au
 
 `Point to Note:` Standard limits as per your firebase plan applies here as well.
 
-### [Refer docs here](docs.md)
+### [Refer documentation here](docs.md)

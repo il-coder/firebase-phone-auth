@@ -4,7 +4,7 @@ Date        : 22-July-2023
 Org.        : IL Coders
 Version     : 1.0.0
 Description : A simplified JS wrapper over the firebase phone authentication process
-GitHub      : 
+GitHub      : https://github.com/il-coder/firebase-phone-auth.git
 */
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";

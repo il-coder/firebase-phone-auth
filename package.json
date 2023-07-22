@@ -1,0 +1,29 @@
+{
+    "name": "firebase-phone-auth",
+    "version": "1.0.0",
+    "author": "Piyush Garg",
+    "description": "A simplified JS wrapper over the firebase phone authentication process",
+    "main": "firebasePhoneAuth.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/il-coder/firebase-phone-auth.git"
+    },
+    "keywords": [
+        "firebase",
+        "phone",
+        "authentication",
+        "otp based login",
+        "based",
+        "login",
+        "phone authentication"
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/il-coder/firebase-phone-auth/issues"
+    },
+    "homepage": "https://github.com/il-coder/firebase-phone-auth#readme",
+    "documentation": "https://github.com/il-coder/firebase-phone-auth/blob/main/docs.md"
+}
